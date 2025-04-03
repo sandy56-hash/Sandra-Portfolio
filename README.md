@@ -28,8 +28,8 @@ I'm proficient in digital forensics, system log analysis, and incident response,
 
 To view this portfolio locally:
 
-1.  Clone the repository: `git clone `
-2.  Navigate to the project directory: `cd [project directory]`
+1.  Clone the repository: `git clone https://github.com/sandy56-hash/Sandra-Portfolio.git `
+2.  Navigate to the project directory: `cd Sandra-Portfolio.git`
 3.  Open `index.html` in your web browser.
 
 ## File Structure
