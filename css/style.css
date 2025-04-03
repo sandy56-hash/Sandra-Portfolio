@@ -1,0 +1,232 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    background: linear-gradient(135deg, #e0f7fa, #c8e6c9); /* Light, gradient background */
+    color: #333333;
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
+}
+
+header {
+    background-color: #311b92; /* Deep purple header */
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+nav {
+    margin-top: 1.5rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-size: 1.1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.2rem;
+}
+
+nav a:hover {
+    color: #ffc107; /* Amber hover */
+    border-bottom: 2px solid #ffc107;
+}
+
+.section {
+    padding: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    border-bottom: 3px solid #ffc107; /* Amber underline */
+    padding-bottom: 0.8rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #311b92; /* Deep purple heading */
+}
+
+.experience-container {
+    display: flex; /* Arrange experience items horizontally */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent items from wrapping */
+    scroll-snap-type: x mandatory; /* Snap scrolling for smooth transitions */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    padding-bottom: 1rem; /* Space for scrollbar */
+}
+
+.experience-item {
+    flex: 0 0 auto; /* Prevent items from stretching */
+    width: 80%; /* Adjust width as needed */
+    margin-right: 2rem; /* Space between items */
+    scroll-snap-align: start; /* Snap to the start of each item */
+    border-left: 4px solid #ffc107;
+    padding-left: 1.5rem;
+    box-sizing: border-box; /* Include padding in width */
+    margin-bottom: 2.5rem; /* added from original experience-item */
+}
+
+.experience-item:last-child {
+    margin-right: 0; /* Remove right margin from last item */
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.skills-list li {
+    background-color: #e0e0e0;
+    padding: 0.7rem 1.2rem;
+    margin: 0.7rem;
+    border-radius: 20px;
+    color: #333333;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.skills-list li:hover {
+    transform: translateY(-3px);
+}
+
+.project-item {
+    border: 1px solid #e0e0e0;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #311b92; /* Deep purple footer */
+    color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section {
+        max-width: 100%;
+        padding: 2rem;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-list li {
+        width: 90%;
+        margin: 0.5rem 0;
+    }
+
+    .experience-item {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .download-cv {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+}
+
+
+
+.download-cv {
+    background-color: #ffc107;
+    color: #311b92;
+    padding: 0.7rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-cv:hover {
+    background-color: #ffca28;
+    color: #1a0d66;
+}
+
+.education-item, .certification-item {
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.contact-form button {
+    background-color: #ffc107;
+    color: #311b92;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ffca28;
+}
